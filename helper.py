@@ -6,6 +6,11 @@ from fuzzywuzzy import fuzz
 import pickle
 import numpy as np
 
+import nltk
+
+nltk.download('stopwords')
+nltk.download('punkt')
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 cv = pickle.load(open(os.path.join(BASE_DIR, 'cv.pkl'), 'rb'))
